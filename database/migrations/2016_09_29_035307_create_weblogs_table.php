@@ -19,7 +19,7 @@ class CreateWeblogsTable extends Migration
             $table->string('level',100);
             $table->string('method',100);
             $table->text('require_data');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 

@@ -12,10 +12,6 @@ class Weblog extends Model
         'user_id', 'level', 'method', 'require_data',
     ];
 
-    public $timestamps = false;
-
-    protected $dates = ['created_at'];
-
     public function account()
     {
         return $this->hasOne('App\Account', 'id', 'user_id');
