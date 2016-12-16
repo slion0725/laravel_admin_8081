@@ -12796,7 +12796,7 @@ table.dataTable tbody td.selected a {
 }
 /*!
  * Datetimepicker for Bootstrap 3
- * version : 4.17.37
+ * version : 4.17.42
  * https://github.com/Eonasdan/bootstrap-datetimepicker/
  */
 
@@ -13227,14 +13227,14 @@ table.dataTable tbody td.selected a {
   border: 0;
 }
 /*!
- *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format('embedded-opentype'),url("font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3") format('woff2'),url("font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3") format('woff'),url("font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3") format('truetype'),url("font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format('svg');
+  src: url("font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'),url("font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format('woff2'),url("font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format('woff'),url("font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format('truetype'),url("font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15617,6 +15617,7 @@ table.dataTable tbody td.selected a {
 }
 
 .fa-battery-4:before,
+.fa-battery:before,
 .fa-battery-full:before {
   content: "\f240";
 }
@@ -16073,6 +16074,184 @@ table.dataTable tbody td.selected a {
   content: "\f2b4";
 }
 
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+
+.fa-linode:before {
+  content: "\f2b8";
+}
+
+.fa-address-book:before {
+  content: "\f2b9";
+}
+
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+
+.fa-user-o:before {
+  content: "\f2c0";
+}
+
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+
+.fa-quora:before {
+  content: "\f2c4";
+}
+
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+
+.fa-telegram:before {
+  content: "\f2c6";
+}
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+
+.fa-shower:before {
+  content: "\f2cc";
+}
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+
+.fa-podcast:before {
+  content: "\f2ce";
+}
+
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+
+.fa-grav:before {
+  content: "\f2d6";
+}
+
+.fa-etsy:before {
+  content: "\f2d7";
+}
+
+.fa-imdb:before {
+  content: "\f2d8";
+}
+
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+
+.fa-eercast:before {
+  content: "\f2da";
+}
+
+.fa-microchip:before {
+  content: "\f2db";
+}
+
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+
+.fa-meetup:before {
+  content: "\f2e0";
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -16093,7 +16272,7 @@ table.dataTable tbody td.selected a {
   overflow: visible;
   clip: auto;
 }
-/*! jQuery UI - v1.12.0 - 2016-07-08
+/*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, draggable.css, resizable.css, progressbar.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
 * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=highlight_soft&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=glass&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=glass&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
@@ -17282,15 +17461,10 @@ a.ui-button:active,
   background-image: url("jquery-ui/themes/smoothness/images/ui-icons_222222_256x240.png");
 }
 
-.ui-button .ui-icon {
-  background-image: url("jquery-ui/themes/smoothness/images/ui-icons_888888_256x240.png");
-}
-
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
-.ui-button:focus .ui-icon,
-.ui-state-default .ui-icon {
+.ui-button:focus .ui-icon {
   background-image: url("jquery-ui/themes/smoothness/images/ui-icons_454545_256x240.png");
 }
 
@@ -17307,6 +17481,10 @@ a.ui-button:active,
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
   background-image: url("jquery-ui/themes/smoothness/images/ui-icons_cd0a0a_256x240.png");
+}
+
+.ui-button .ui-icon {
+  background-image: url("jquery-ui/themes/smoothness/images/ui-icons_888888_256x240.png");
 }
 
 .ui-icon-blank {
