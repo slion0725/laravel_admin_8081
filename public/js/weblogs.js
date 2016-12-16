@@ -129,7 +129,14 @@ $(function () {
         }, {
             data: 'created_at',
             name: 'created_at',
-            searchable: true
+            searchable: true,
+            render:function(data,type,full,meta){
+                moment.tz.setDefault(moment.tz.guess());
+                if(data != null){
+                    return moment(moment.utc(data).toDate()).format("YYYY-MM-DD HH:mm:ss");
+                }
+                return data;
+            }
         }]
     });
 
