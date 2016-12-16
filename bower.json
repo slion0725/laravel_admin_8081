@@ -1,12 +1,12 @@
 {
-  "name": "MLAdmin",
+  "name": "laravel_admin_8081",
   "description": "",
   "main": "",
   "authors": [
     "miles <slion0725@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/slion0725/MLAdmin",
+  "homepage": "https://github.com/slion0725/laravel_admin_8081",
   "ignore": [
     "**/.*",
     "node_modules",
