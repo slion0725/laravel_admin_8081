@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
 
 class ForgotPasswordController extends Controller
 {
@@ -28,5 +30,40 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    public function showLinkRequestForm()
+    {
+        return view('admin.resetpasswordbymailtolink');
+    }
+    public function sendResetLinkEmail(Request $request)
+    {
+        $this->validate($request, ['email' => 'required|email']);
+
+        // We will send the password reset link to this user. Once we have attempted
+        // to send the link, we will examine the response then see the message we
+        // need to show to the user. Finally, we'll send out a proper response.
+        $response = $this->broker()->sendResetLink(
+            $request->only('email'), $this->resetNotifier()
+        );
+
+        if ($response === Password::RESET_LINK_SENT) {
+            // return back()->with('status', trans($response));
+            return response()->json([
+                'status' => true,
+                'message' => trans($response),
+            ]);
+            // 'vendor/laravel/framework/src/Illuminate/Notifications/resources/views/email.blade.php'
+        }
+
+        // If an error was returned by the password broker, we will get this message
+        // translated so we can notify a user of the problem. We'll redirect back
+        // to where the users came from so they can attempt this process again.
+        // return back()->withErrors(
+        //     ['email' => trans($response)]
+        // );
+        return response()->json([
+            'status' => false,
+            'message' => trans($response),
+        ]);
     }
 }

@@ -6,6 +6,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -66,6 +67,32 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+        ]);
+    }
+    public function showRegistrationForm()
+    {
+        return view('admin.register');
+    }
+    public function register(Request $request)
+    {
+        $user = $request->only('name', 'email', 'password', 'password_confirmation');
+
+        $validator = $this->validator($user);
+
+        if ($validator->fails() === true) {
+            $errors = $validator->errors()->all();
+
+            return response()->json([
+                'status' => false,
+                'message' => implode('<br>', $errors),
+            ]);
+        }
+
+        $this->create($user);
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Register success',
         ]);
     }
 }
