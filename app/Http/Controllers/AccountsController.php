@@ -10,6 +10,7 @@ use Validator;
 use Auth;
 use App\Weblog;
 use App\Menulink;
+use App\Setting;
 
 class AccountsController extends Controller
 {
@@ -225,6 +226,13 @@ class AccountsController extends Controller
     public function destroy($id)
     {
         $account = Account::where('id', $id);
+        
+        if (Setting::where('name','MasterAccountID')->where('data', $id)->count() == 1){
+            return response()->json([
+                'status' => false,
+                'message' => 'N/A',
+            ]);
+        }
 
         if ($account->count() !== 1) {
             return response()->json([
