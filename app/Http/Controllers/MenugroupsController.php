@@ -14,6 +14,7 @@ use App\Weblog;
 use App\Account;
 use App\Menuitem;
 use App\Menulink;
+use App\Setting;
 
 class MenugroupsController extends Controller
 {
@@ -207,8 +208,6 @@ class MenugroupsController extends Controller
         $d['id'] = $a->id;
         $d['name'] = $a->name;
         $d['description'] = $a->description;
-        //$d['created_at'] = $a->created_at->format('Y-m-d H:i:s');
-        //$d['updated_at'] = $a->updated_at->format('Y-m-d H:i:s');
 
         $d['accounts'] = [];
         $d['menuitems'] = [];
@@ -299,6 +298,13 @@ class MenugroupsController extends Controller
     public function destroy($id)
     {
         $r = Menugroup::where('id', $id);
+
+        if (Setting::where('name','MasterGroupID')->where('data', $id)->count() == 1){
+            return response()->json([
+                'status' => false,
+                'message' => 'N/A',
+            ]);
+        }
 
         if ($r->count() !== 1) {
             return response()->json([
